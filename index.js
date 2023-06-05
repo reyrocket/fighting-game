@@ -17,6 +17,8 @@ class Sprite {
 
     update() {
         this.draw()
+
+        this.position.x += this.velocity.x
         this.position.y += this.velocity.y
         this.position.x += this.velocity.x
 
@@ -66,3 +68,12 @@ function animate() {
 }
 
 animate()
+
+window.addEventListener('keydown', (event) => {
+    switch (event.key) {
+        case 'd':
+        player.velocity.x = 10
+        break
+    }
+})
+}
