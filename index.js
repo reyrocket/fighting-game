@@ -77,4 +77,12 @@ window.addEventListener('keydown', (event) => {
         break
     }
 })
-}
+
+window.addEventListener('keyup', (event) => {
+    switch (event.key) {
+        case 'd':
+        player.velocity.x = 0
+        break
+    }
+})
+
